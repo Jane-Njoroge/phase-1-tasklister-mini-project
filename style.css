@@ -1,37 +1,122 @@
-html {
-  height: 100%;
-  width: 100%;
-  font-family: "Titillium Web", sans-serif;
-}
-
+ Global Styles */
 body {
-  min-height: 100%;
-  min-width: 100%;
-  background: linear-gradient(pink, violet);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
 }
 
-button {
-  font-size: 7px;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2a2a2a;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    border-radius: 5px;
 }
 
-#main-content {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+/* Header */
+.app-title {
+    text-align: center;
+    color: #ff69b4;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#list {
-  margin: 10px;
-  border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.75);
-  padding: 15px 20px 18px 18px;
-  border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+/* Form Styles */
+.task-form {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ff69b4;
 }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ff69b4;
+}
+
+.form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ff69b4;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.submit-btn {
+    background-color: #ff69b4;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff1493;
+}
+
+/* Task List Styles */
+.task-list {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ff69b4;
+}
+
+.list-title {
+    color: #ff69b4;
+    margin-bottom: 15px;
+}
+
+.sort-btn {
+    background-color: #1a1a1a;
+    color: #ff69b4;
+    padding: 8px 12px;
+    border: 1px solid #ff69b4;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sort-btn:hover {
+    background-color: #ff69b4;
+    color: #1a1a1a;
+}
+
+#tasks {
+    list-style-type: none;
+    padding: 0;
+}
+
+#tasks li {
+    background-color: #2a2a2a;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #ff69b4;
+}
+
+/* Priority Colors */
+.priority-low { border-left-color: #ff69b4; }
+.priority-medium { border-left-color: #ff1493; }
+.priority-high { border-left-color: #ff00ff; }
+
